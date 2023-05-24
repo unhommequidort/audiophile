@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Includes {
+  id        Int      @id @default(autoincrement())
+  quantity  Int
+  item      String
+  productId Int?
+  Product   Product? @relation(fields: [productId], references: [id])
+}
+
+model Other {
+  id                                      Int      @id @default(autoincrement())
+  productId                               Int?
+  other_product_id                        Int?
+  Product_Other_other_product_idToProduct Product? @relation("Other_other_product_idToProduct", fields: [other_product_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Product_Other_productIdToProduct        Product? @relation("Other_productIdToProduct", fields: [productId], references: [id])
+}
+
+model Product {
+  id                                    Int        @id @default(autoincrement())
+  slug                                  String
+  name                                  String
+  category                              String
+  new                                   Boolean
+  price                                 Int
+  description                           String
+  features                              String
+  Includes                              Includes[]
+  Other_Other_other_product_idToProduct Other[]    @relation("Other_other_product_idToProduct")
+  Other_Other_productIdToProduct        Other[]    @relation("Other_productIdToProduct")
+}
