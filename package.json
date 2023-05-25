@@ -48,6 +48,8 @@
     "@testing-library/user-event": "13.5.0",
     "eslint-plugin-storybook": "^0.6.12",
     "eslint-plugin-testing-library": "^5.0.1",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0",
     "prisma": "^4.14.1",
     "storybook": "^7.0.17"
   }
