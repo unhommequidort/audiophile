@@ -1,3 +1,4 @@
+import Buttons from './components/Buttons/Buttons';
 import Colors from './components/Colors/Colors';
 import Typography from './components/Typography/Typography';
 
@@ -9,6 +10,7 @@ const DesignPage = () => {
       </h1>
       <Colors />
       <Typography />
+      <Buttons />
     </div>
   );
 };
