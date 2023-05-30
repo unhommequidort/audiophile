@@ -19,8 +19,7 @@ module.exports = {
         'anti-flash-white': 'hsl(0 0% 95%)',
         lotion: 'hsl(0 0% 98%)',
         tangelo: 'hsl(21 94% 75%)',
-        // white: 'hsl(0 0% 100%)',
-        // black: 'hsl(0 0% 0%)',
+        error: 'hsl(0 65% 49%)',
       },
     },
 
@@ -36,5 +35,5 @@ module.exports = {
       '5xl': '3.5rem',
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };
