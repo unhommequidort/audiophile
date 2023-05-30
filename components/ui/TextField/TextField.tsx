@@ -1,6 +1,7 @@
 'use client';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { InputHTMLAttributes } from 'react';
+import { FieldValues, UseFormRegister } from 'react-hook-form';
 
 const textField = cva('textField', {
   variants: {
@@ -12,7 +13,8 @@ const textField = cva('textField', {
         'focus:outline-none',
         'focus:ring-0',
         'invalid:border-error',
-        'invalid:border-2',
+        'focus:invalid:border-error',
+        'invalid:border-[2px]',
       ],
     },
   },
@@ -30,6 +32,8 @@ export interface TextFieldProps
   type?: string;
   disabled?: boolean;
   placeholder?: string;
+  errorMessage?: string;
+  register: UseFormRegister<FieldValues>;
 }
 
 const TextField = ({
@@ -41,23 +45,24 @@ const TextField = ({
   className,
   intent,
   placeholder,
+  errorMessage,
 }: TextFieldProps) => {
   return (
-    <fieldset>
-      <label
-        htmlFor={id}
-        className="mb-2 block text-xs font-semibold invalid:text-error"
-      >
+    <fieldset className="relative">
+      <label htmlFor={id} className="mb-2 block text-xs font-semibold">
         {label}
       </label>
       <input
+        required
         name={name}
         disabled={disabled}
         id={id}
         type={type}
         placeholder={placeholder}
         className={[
+          'peer',
           'rounded-lg',
+          'border',
           'w-full',
           'text-sm',
           'py-4',
@@ -65,6 +70,9 @@ const TextField = ({
           textField({ intent, className }),
         ].join(' ')}
       />
+      <span className="invisible absolute right-0 top-0 text-xs text-error peer-invalid:visible">
+        {errorMessage}
+      </span>
     </fieldset>
   );
 };
