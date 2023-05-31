@@ -1,5 +1,7 @@
 import './globals.css';
 import { Manrope } from 'next/font/google';
+import Navbar from '@/components/Header/Navbar';
+import Nav from '@/components/Header/Nav/Nav';
 
 const manrope = Manrope({
   weight: ['400', '500', '700'],
@@ -20,7 +22,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header className="bg-chinese-black px-6 xl:rounded-t-lg">
+          <Navbar>
+            {/* @ts-expect-error Server Component */}
+            <Nav />
+          </Navbar>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
