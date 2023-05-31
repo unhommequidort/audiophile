@@ -29,6 +29,7 @@ model Product {
   name                                  String
   category                              String
   new                                   Boolean
+  showcase                              Boolean    @default(false)
   price                                 Int
   description                           String
   features                              String
