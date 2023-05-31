@@ -11,7 +11,10 @@ const Nav = async () => {
   });
   return (
     <nav className="hidden space-x-[2.125rem] text-sm font-bold uppercase md:flex">
-      <Link href="#" className="text-white transition-colors hover:text-peru">
+      <Link
+        href="/design"
+        className="text-white transition-colors hover:text-peru"
+      >
         Home
       </Link>
       {products.map((product) => (

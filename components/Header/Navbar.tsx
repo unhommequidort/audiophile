@@ -2,15 +2,17 @@
 
 import { CldImage } from 'next-cloudinary';
 import Link from 'next/link';
+import { useState } from 'react';
 
 interface NavbarProps {
   children?: React.ReactNode;
 }
 
 const Navbar = ({ children }: NavbarProps) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="container m-auto flex items-center justify-between border-b border-gray-500 bg-chinese-black pb-9 pt-8">
-      <button className="md:hidden">
+      <button className="md:hidden" onClick={() => setIsMenuOpen(true)}>
         <CldImage
           priority
           src="https://res.cloudinary.com/dwboe2hgs/image/upload/v1684954957/audiophile/assets/shared/tablet/icon-hamburger_gq3gwz.svg"
