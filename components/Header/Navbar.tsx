@@ -2,7 +2,6 @@
 
 import { CldImage } from 'next-cloudinary';
 import Link from 'next/link';
-import Nav from './Nav/Nav';
 
 interface NavbarProps {
   children?: React.ReactNode;
@@ -11,6 +10,15 @@ interface NavbarProps {
 const Navbar = ({ children }: NavbarProps) => {
   return (
     <div className="container m-auto flex items-center justify-between border-b border-gray-500 bg-chinese-black pb-9 pt-8">
+      <button className="md:hidden">
+        <CldImage
+          priority
+          src="https://res.cloudinary.com/dwboe2hgs/image/upload/v1684954957/audiophile/assets/shared/tablet/icon-hamburger_gq3gwz.svg"
+          alt="Open menu"
+          width="16"
+          height="15"
+        />
+      </button>
       <Link href="/">
         <CldImage
           priority

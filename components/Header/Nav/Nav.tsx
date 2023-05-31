@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma';
+import Link from 'next/link';
 import React from 'react';
 
 const Nav = async () => {
@@ -9,14 +10,18 @@ const Nav = async () => {
     distinct: ['category'],
   });
   return (
-    <nav className="flex space-x-[2.125rem] text-sm font-semibold uppercase">
-      <a href="#" className="text-white transition-colors hover:text-peru">
+    <nav className="hidden space-x-[2.125rem] text-sm font-bold uppercase md:flex">
+      <Link href="#" className="text-white transition-colors hover:text-peru">
         Home
-      </a>
+      </Link>
       {products.map((product) => (
-        <a href="#" className="text-white transition-colors hover:text-peru">
+        <Link
+          key={product.category}
+          href={`/category/${product.category}`}
+          className="text-white transition-colors hover:text-peru"
+        >
           {product.category}
-        </a>
+        </Link>
       ))}
     </nav>
   );
