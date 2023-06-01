@@ -1,4 +1,4 @@
-import { prisma } from '@/lib/prisma';
+import prisma from '@/lib/prisma';
 import Nav from '../Header/Nav/Nav';
 import Navbar from '../Header/Navbar';
 import Button from '@/components/ui/Button/Button';

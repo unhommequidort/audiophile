@@ -1,5 +1,5 @@
 import Card from './Card/Card';
-import { prisma } from '@/lib/prisma';
+import prisma from '@/lib/prisma';
 
 export const revalidate = 3600;
 
