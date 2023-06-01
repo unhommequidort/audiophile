@@ -2,13 +2,20 @@ import { prisma } from '@/lib/prisma';
 import Link from 'next/link';
 import React from 'react';
 
-const Nav = async () => {
+export const revalidate = 3600;
+
+async function getCategories() {
   let products = await prisma.product.findMany({
     select: {
       category: true,
     },
     distinct: ['category'],
   });
+  return products;
+}
+
+const Nav = async () => {
+  const products = await getCategories();
   return (
     <nav className="hidden space-x-[2.125rem] text-sm font-bold uppercase md:flex">
       <Link
