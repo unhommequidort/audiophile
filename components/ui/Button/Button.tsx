@@ -50,7 +50,7 @@ const Button = ({ className, intent, children, href, title }: ButtonProps) => {
         'px-8',
         'uppercase',
         'text-xs',
-        'font-semibold',
+        'font-bold',
         'transition-colors',
         button({ intent, className }),
       ].join(' ')}
