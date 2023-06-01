@@ -20,6 +20,8 @@ module.exports = {
         lotion: 'hsl(0 0% 98%)',
         tangelo: 'hsl(21 94% 75%)',
         error: 'hsl(0 65% 49%)',
+        grey: 'hsl(0 0% 59%)',
+        'hero-black': '#191919',
       },
     },
 

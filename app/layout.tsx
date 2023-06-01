@@ -22,15 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <header className="bg-chinese-black px-6 xl:rounded-t-lg">
-          <Navbar>
-            {/* @ts-expect-error Server Component */}
-            <Nav />
-          </Navbar>
-        </header>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

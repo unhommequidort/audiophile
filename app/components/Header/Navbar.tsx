@@ -11,7 +11,7 @@ interface NavbarProps {
 const Navbar = ({ children }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="container m-auto flex items-center justify-between border-b border-gray-500 bg-chinese-black pb-9 pt-8">
+    <div className="container m-auto flex items-center justify-between border-b border-b-grey/40 pb-9 pt-8">
       <button className="md:hidden" onClick={() => setIsMenuOpen(true)}>
         <CldImage
           priority

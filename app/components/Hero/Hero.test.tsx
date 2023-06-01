@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import Hero from './Hero';
 
 describe('Hero', () => {
-  it('renders new product details', () => {
-    render(<Hero />);
+  it('renders new product details', async () => {
+    render(await Hero());
     expect(
       screen.getByRole('heading', { name: /new product/i })
     ).toBeInTheDocument();
