@@ -1,8 +1,6 @@
-import { prisma } from '@/lib/prisma';
 import React from 'react';
 import Hero from './components/Hero/Hero';
-import Navbar from './components/Header/Navbar';
-import Nav from './components/Header/Nav/Nav';
+
 import Cards from './components/Cards/Cards';
 
 const Home = () => {
@@ -12,7 +10,7 @@ const Home = () => {
         {/* @ts-expect-error Server Component */}
         <Hero />
       </section>
-
+      {/* @ts-expect-error Server Component */}
       <Cards />
     </main>
   );
