@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './components/Hero/Hero';
 
 import Cards from './components/Cards/Cards';
+import ProductCalloutLarge from './components/ProductCalloutLarge/ProductCalloutLarge';
 
 const Home = () => {
   return (
@@ -12,6 +13,9 @@ const Home = () => {
       </section>
       {/* @ts-expect-error Server Component */}
       <Cards />
+      <div className="mt-40 w-full px-6">
+        <ProductCalloutLarge />
+      </div>
     </main>
   );
 };
