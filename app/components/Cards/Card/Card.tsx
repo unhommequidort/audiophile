@@ -1,5 +1,6 @@
-import Button from '@/components/ui/Button/Button';
+import Button from '../../../../components/ui/Button/Button';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface CardProps {
@@ -9,13 +10,15 @@ interface CardProps {
 const Card = ({ category }: CardProps) => {
   return (
     <div className="mt-[5rem] flex h-[12.75rem] w-full flex-col items-center justify-start rounded-lg bg-anti-flash-white sm:w-[21.875rem]">
-      <img
-        src={`https://res.cloudinary.com/dwboe2hgs/image/upload/v1684954930/audiophile/assets/shared/desktop/image-category-thumbnail-${category}.png`}
-        alt={category}
-        width="422"
-        height="438"
-        className="-mt-20 h-52 w-56"
-      />
+      <Link href={`category/${category}`}>
+        <img
+          src={`https://res.cloudinary.com/dwboe2hgs/image/upload/v1684954930/audiophile/assets/shared/desktop/image-category-thumbnail-${category}.png`}
+          alt={`Shop ${category}`}
+          width="422"
+          height="438"
+          className="-mt-20 h-52 w-56"
+        />
+      </Link>
       <h3 className="text-lg font-semibold uppercase leading-6 tracking-[1.3px]">
         {category}
       </h3>
