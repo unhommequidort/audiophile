@@ -3,6 +3,7 @@ import Hero from './components/Hero/Hero';
 
 import Cards from './components/Cards/Cards';
 import ProductCalloutLarge from './components/ProductCalloutLarge/ProductCalloutLarge';
+import ProductCalloutMedium from './components/ProductCalloutMedium/ProductCalloutMedium';
 
 const Home = () => {
   return (
@@ -13,8 +14,9 @@ const Home = () => {
       </section>
       {/* @ts-expect-error Server Component */}
       <Cards />
-      <div className="mt-40 w-full px-6">
+      <div className="mt-40 w-full space-y-6 px-6">
         <ProductCalloutLarge />
+        <ProductCalloutMedium />
       </div>
     </main>
   );

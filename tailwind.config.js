@@ -12,6 +12,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'medium-callout-sm': 
       },
       colors: {
         peru: 'hsl(22 65% 57%)',
@@ -22,6 +23,7 @@ module.exports = {
         error: 'hsl(0 65% 49%)',
         grey: 'hsl(0 0% 59%)',
         'hero-black': '#191919',
+        'callout-gray': 'hsl(0deg 0% 89%)',
       },
     },
 
