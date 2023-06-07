@@ -20,7 +20,7 @@ const ProductCalloutLarge = () => {
       />
 
       <div className="flex flex-col items-center justify-between space-y-4 text-center">
-        <h4 className="text-5xl font-semibold uppercase leading-[3.625rem] tracking-wider text-white">
+        <h4 className="text-3xl font-semibold uppercase leading-10 tracking-wider text-white sm:text-5xl sm:leading-[3.625rem]">
           ZX9 Speaker
         </h4>
         <p className="text-base text-white">
