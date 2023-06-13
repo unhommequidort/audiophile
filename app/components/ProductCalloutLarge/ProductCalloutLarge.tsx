@@ -12,13 +12,23 @@ const ProductCalloutLarge = () => {
       }}
     >
       <div className="lg:relative lg:flex-1">
-        <Image
-          width={320}
-          height={388}
-          src="https://res.cloudinary.com/dwboe2hgs/image/upload/v1684954199/audiophile/assets/home/mobile/image-speaker-zx9_sfyz0q.png"
-          alt="ZX9 Speaker"
-          className="block w-44 lg:absolute lg:-bottom-80 lg:w-[410px] lg:self-end xl:left-16"
-        />
+        <picture>
+          <source
+            srcSet="https://res.cloudinary.com/dwboe2hgs/image/upload/v1684954178/audiophile/assets/home/desktop/image-speaker-zx9_kaz4uj.png"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcSet="https://res.cloudinary.com/dwboe2hgs/image/upload/v1684954220/audiophile/assets/home/tablet/image-speaker-zx9_vesf3h.png"
+            media="(min-width: 640px)"
+          />
+          <Image
+            width={320}
+            height={388}
+            src="https://res.cloudinary.com/dwboe2hgs/image/upload/v1684954199/audiophile/assets/home/mobile/image-speaker-zx9_sfyz0q.png"
+            alt="ZX9 Speaker"
+            className="block w-44 lg:absolute lg:-bottom-80 lg:w-[410px] lg:self-end xl:left-16"
+          />
+        </picture>
       </div>
 
       <div className="flex flex-col items-center justify-between space-y-8 text-center lg:mx-16 lg:flex-1 lg:items-start lg:text-left">
