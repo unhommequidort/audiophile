@@ -9,7 +9,7 @@ interface CardProps {
 
 const Card = ({ category }: CardProps) => {
   return (
-    <div className="mt-[5rem] flex h-[12.75rem] w-full flex-col items-center justify-start rounded-lg bg-anti-flash-white sm:w-[21.875rem]">
+    <div className="mt-[5rem] flex h-[12.75rem] w-full flex-col items-center justify-start rounded-lg bg-anti-flash-white">
       <Link href={`category/${category}`}>
         <img
           src={`https://res.cloudinary.com/dwboe2hgs/image/upload/v1684954930/audiophile/assets/shared/desktop/image-category-thumbnail-${category}.png`}
