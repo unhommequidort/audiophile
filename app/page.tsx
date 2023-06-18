@@ -15,7 +15,7 @@ const Home = () => {
       </section>
       {/* @ts-expect-error Server Component */}
       <Cards />
-      <div className="mt-40 w-full space-y-6 px-6">
+      <div className="mt-40 w-full space-y-8 px-6">
         <ProductCalloutLarge />
         <ProductCalloutMedium />
         <ProductCalloutSmall />

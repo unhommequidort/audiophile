@@ -17,7 +17,7 @@ const Cards = async () => {
   const products = await getCategories();
   return (
     <section className="w-full px-6">
-      <div className="container mx-auto mt-[7.5rem] flex max-w-screen-xl flex-col items-center justify-between gap-4 sm:flex-row">
+      <div className="container mx-auto mt-[7.5rem] flex max-w-screen-xl flex-col items-center justify-between gap-6 md:flex-row md:gap-3 lg:gap-8">
         {products.map((product) => (
           <Card key={product.category} category={product.category} />
         ))}
